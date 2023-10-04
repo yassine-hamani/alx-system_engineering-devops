@@ -1,3 +1,2 @@
 #!/bin/bash
-IFS=':' read -ra DIR <<< "$PATH"
-echo "${#DIR[@]}"
+echo $PATH | tr ':' '\n' | wc -l
